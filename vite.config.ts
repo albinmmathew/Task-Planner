@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Task-Planner/',
   plugins: [
     react(),
     // Integrate Progressive Web App support to enable standalone installation and offline operations
@@ -17,7 +18,7 @@ export default defineConfig({
         theme_color: '#12131a',
         background_color: '#12131a',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/Task-Planner/',
         icons: [
           {
             src: 'favicon.svg',
@@ -37,14 +38,14 @@ export default defineConfig({
             name: 'Create New Task',
             short_name: 'New Task',
             description: 'Launch directly into the create task form',
-            url: '/?action=new-task',
+            url: '/Task-Planner/?action=new-task',
             icons: [{ src: 'favicon.svg', sizes: '192x192', type: 'image/svg+xml' }]
           },
           {
             name: 'Cloud Pull Sync',
             short_name: 'Pull Sync',
             description: 'Trigger visual cloud diff and pull comparison',
-            url: '/?action=pull',
+            url: '/Task-Planner/?action=pull',
             icons: [{ src: 'favicon.svg', sizes: '192x192', type: 'image/svg+xml' }]
           }
         ]
